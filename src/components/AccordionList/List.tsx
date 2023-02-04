@@ -9,11 +9,11 @@ import styles from './List.component.style';
 
 interface ListProps {
     items: Array<any>;
-    onItemPress(): string
-    onLearnMorePress(): string
+    onItemPress(id: number): void
+    onLearnMorePress(id: number): void
 }
 
-const List = ({ items, onItemPress, onLearnMorePress }: ListProps) => {
+const List = ({ items, onItemPress, onLearnMorePress }: ListProps): any => {
     return items.map((item, index) => {
         return (
             <View key={`list - item - ${item} - ${index}`} style={styles.item}>

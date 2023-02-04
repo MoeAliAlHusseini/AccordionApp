@@ -13,8 +13,8 @@ interface ItemProps {
     description: string;
     experience: string;
     isOpen: boolean;
-    onItemPress(id: number): string
-    onLearnMorePress(id: number): string
+    onItemPress(id: number): void
+    onLearnMorePress(id: number): void
 }
 
 const Item = (props: ItemProps) => {
