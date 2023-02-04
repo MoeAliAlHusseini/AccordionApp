@@ -17,13 +17,13 @@ const items = [
   {
     title: 'Joe',
     description: 'SDET',
-    experience: '4.5 years of web and mobile development experience - Mainly in Javascript, Typescript, React and React Native',
+    experience: 'Experienced in Cypress',
     isOpen: false,
   },
   {
     title: 'Zoe',
     description: 'Product Owner',
-    experience: '4.5 years of web and mobile development experience - Mainly in Javascript, Typescript, React and React Native',
+    experience: 'Experienced in handling requirements and communicating with stakeholders',
     isOpen: false,
   },
 ];
