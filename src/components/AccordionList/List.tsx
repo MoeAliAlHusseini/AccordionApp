@@ -17,7 +17,7 @@ const List = ({ items, onItemPress }: ListProps) => {
         return (
             <View style={styles.item}>
                 <Item
-                    key={`item - ${item} - ${index}`}
+                    key={`list - item - ${item} - ${index}`}
                     id={index}
                     title={item.title}
                     description={item.description}
