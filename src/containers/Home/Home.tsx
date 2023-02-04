@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React, { useEffect, useState } from 'react';
 
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View } from 'react-native';
 
 import List from '../../components/AccordionList';
 
@@ -9,21 +9,21 @@ import styles from './Home.component.style';
 
 const items = [
   {
-    id: 0,
     title: 'Moe',
     description: 'Software Engineer',
+    experience: '4.5 years of web and mobile development experience - Mainly in Javascript, Typescript, React and React Native',
     isOpen: false,
   },
   {
-    id: 0,
     title: 'Joe',
     description: 'SDET',
+    experience: '4.5 years of web and mobile development experience - Mainly in Javascript, Typescript, React and React Native',
     isOpen: false,
   },
   {
-    id: 0,
     title: 'Zoe',
     description: 'Product Owner',
+    experience: '4.5 years of web and mobile development experience - Mainly in Javascript, Typescript, React and React Native',
     isOpen: false,
   },
 ];
@@ -33,19 +33,19 @@ const Home = () => {
   const [arrayOfItems, setArrayOfItems] = useState(items);
 
   useEffect(() => {
-    const updatedArray = items?.map((item, index) => {
-      return {
-        ...item,
-        id: index,
-      };
-    });
-    setArrayOfItems(updatedArray);
-  }, []);
+
+  }, [arrayOfItems]);
 
 
   const handleOnItemPress = (id: number) => {
     // this will handle which item was pressed and act accordingly
-    console.log('id in the handleOnItemPress: ', id);
+    const updatedArrayOfItems = arrayOfItems.map((item, index) => {
+      return {
+        ...item,
+        isOpen: index === id && !item.isOpen,
+      };
+    });
+    setArrayOfItems(updatedArrayOfItems);
   };
 
 
