@@ -18,9 +18,10 @@ const List = ({ items, onItemPress }: ListProps) => {
             <View style={styles.item}>
                 <Item
                     key={`item - ${item} - ${index}`}
-                    id={item.id}
+                    id={index}
                     title={item.title}
                     description={item.description}
+                    experience={item.experience}
                     isOpen={item.isOpen}
                     onItemPress={onItemPress}
                 />
