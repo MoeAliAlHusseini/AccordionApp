@@ -33,7 +33,6 @@ const Home = ({ navigation }) => {
   const [arrayOfItems, setArrayOfItems] = useState(items);
 
   useEffect(() => {
-
   }, [arrayOfItems]);
 
 
@@ -54,7 +53,7 @@ const Home = ({ navigation }) => {
   };
 
   const handleOnLearnMore = (id: number) => {
-    console.log('id on learn more: ', id);
+
     navigation.navigate('Details', {
       title: arrayOfItems[id].title,
       experience: arrayOfItems[id].experience,
