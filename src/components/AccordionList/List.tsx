@@ -10,9 +10,10 @@ import styles from './List.component.style';
 interface ListProps {
     items: Array<any>;
     onItemPress(): string
+    onLearnMorePress(): string
 }
 
-const List = ({ items, onItemPress }: ListProps) => {
+const List = ({ items, onItemPress, onLearnMorePress }: ListProps) => {
     return items.map((item, index) => {
         return (
             <View key={`list - item - ${item} - ${index}`} style={styles.item}>
@@ -23,6 +24,7 @@ const List = ({ items, onItemPress }: ListProps) => {
                     experience={item.experience}
                     isOpen={item.isOpen}
                     onItemPress={onItemPress}
+                    onLearnMorePress={onLearnMorePress}
                 />
             </View>
         );

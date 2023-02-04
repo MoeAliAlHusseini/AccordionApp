@@ -2,10 +2,13 @@ import React from 'react';
 
 import { View, Text } from 'react-native';
 
-const Details = () => {
+const Details = ({ route }) => {
+    const { title, experience } = route.params;
+
     return (
         <View>
-            <Text>Title</Text>
+            <Text>Hello {title}</Text>
+            <Text>Experience: {experience}</Text>
         </View>
     );
 };
