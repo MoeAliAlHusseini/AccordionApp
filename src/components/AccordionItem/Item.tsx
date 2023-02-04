@@ -9,6 +9,7 @@ interface ItemProps {
     id: number;
     title: string;
     description: string;
+    experience: string;
     isOpen: boolean;
     onItemPress(id: number): string
 }
@@ -20,6 +21,11 @@ const Item = (props: ItemProps) => {
                 <Text style={styles.title}>{props.title}</Text>
                 <Text style={styles.description}>{props.description}</Text>
             </TouchableOpacity>
+            {props.isOpen && <View>
+                <Text style={{ color: 'red' }}>
+                    {props.experience}
+                </Text>
+            </View>}
         </View>
     );
 };

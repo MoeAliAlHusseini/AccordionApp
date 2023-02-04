@@ -2,6 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: 'column',
     paddingHorizontal: 10,
     paddingVertical: 20,
     borderRadius: 4,
