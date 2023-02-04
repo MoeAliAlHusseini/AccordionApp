@@ -17,17 +17,22 @@ interface ItemProps {
 
 const Item = (props: ItemProps) => {
     return (
-        <View style={styles.container}>
-            <TouchableOpacity key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
-                <Text style={styles.title}>{props.title}</Text>
-                <Text style={styles.description}>{props.description}</Text>
-            </TouchableOpacity>
-            {props.isOpen && <View>
-                <Text style={{ color: Colors.RED }}>
-                    {props.experience}
-                </Text>
-            </View>}
-        </View>
+        <>
+            <View style={styles.container}>
+                <TouchableOpacity key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
+                    <Text style={styles.title}>{props.title}</Text>
+                    <Text style={styles.description}>{props.description}</Text>
+                </TouchableOpacity>
+                {props.isOpen && <View>
+                    <Text>
+                        {props.experience}
+                    </Text>
+
+                </View>}
+                {props.isOpen && <Text style={{ color: Colors.BLUE }}>Learn more</Text>}
+            </View>
+
+        </>
     );
 };
 

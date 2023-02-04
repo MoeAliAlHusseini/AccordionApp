@@ -3,6 +3,7 @@ const Colors = {
   GREEN: 'green',
   WHITE: 'white',
   YELLOW: 'yellow',
+  BLUE: 'blue',
 };
 
 export default Colors;
