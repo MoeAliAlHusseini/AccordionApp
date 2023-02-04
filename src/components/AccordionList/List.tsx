@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import Item from '../AccordionItem';
 
@@ -15,9 +15,8 @@ interface ListProps {
 const List = ({ items, onItemPress }: ListProps) => {
     return items.map((item, index) => {
         return (
-            <View style={styles.item}>
+            <View key={`list - item - ${item} - ${index}`} style={styles.item}>
                 <Item
-                    key={`list - item - ${item} - ${index}`}
                     id={index}
                     title={item.title}
                     description={item.description}
