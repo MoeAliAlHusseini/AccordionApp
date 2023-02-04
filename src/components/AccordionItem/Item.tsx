@@ -5,6 +5,7 @@ import { View, Text, TouchableOpacity, Image } from 'react-native';
 
 import styles from './Item.component.style';
 import Colors from '../../style/colors';
+import Icons from '../../style/icons';
 
 interface ItemProps {
     id: number;
@@ -13,15 +14,19 @@ interface ItemProps {
     experience: string;
     isOpen: boolean;
     onItemPress(id: number): string
+    onLearnMorePress(id: number): string
 }
 
 const Item = (props: ItemProps) => {
     return (
         <>
             <View style={styles.container}>
-                <TouchableOpacity key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
-                    <Text style={styles.title}>{props.title}</Text>
-                    <Text style={styles.description}>{props.description}</Text>
+                <TouchableOpacity activeOpacity={0.6} key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
+                    <View>
+                        <Text style={styles.title}>{props.title}</Text>
+                        <Text style={styles.description}>{props.description}</Text>
+                    </View>
+                    <Image source={Icons.chevronIcon} style={[styles.chevron, { transform: [{ rotate: props.isOpen ? '0deg' : '180deg' }] }]} />
                 </TouchableOpacity>
                 {props.isOpen && <View>
                     <Text>
@@ -29,7 +34,7 @@ const Item = (props: ItemProps) => {
                     </Text>
 
                 </View>}
-                {props.isOpen && <Text style={{ color: Colors.BLUE }}>Learn more</Text>}
+                {props.isOpen && <TouchableOpacity onPress={() => props.onLearnMorePress(props.id)}><Text style={{ color: Colors.BLUE }}>Learn more</Text></TouchableOpacity>}
             </View>
 
         </>

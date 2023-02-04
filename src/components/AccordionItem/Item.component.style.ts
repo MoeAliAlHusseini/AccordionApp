@@ -9,7 +9,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   touchableOpacityContainer: {
+    flexDirection: 'row',
     width: '100%',
+  },
+  chevron: {
+    width: 12,
+    height: 12,
+    marginLeft: 'auto',
   },
   title: {
     marginBottom: 20,

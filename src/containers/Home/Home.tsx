@@ -28,7 +28,7 @@ const items = [
   },
 ];
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
   const [arrayOfItems, setArrayOfItems] = useState(items);
 
@@ -53,10 +53,18 @@ const Home = () => {
     setArrayOfItems(updatedArrayOfItems);
   };
 
+  const handleOnLearnMore = (id: number) => {
+    console.log('id on learn more: ', id);
+    navigation.navigate('Details', {
+      title: arrayOfItems[id].title,
+      experience: arrayOfItems[id].experience,
+    });
+  };
+
 
   return (
     <View style={styles.container}>
-      <List items={arrayOfItems} onItemPress={handleOnItemPress} />
+      <List items={arrayOfItems} onItemPress={handleOnItemPress} onLearnMorePress={handleOnLearnMore} />
     </View>
   );
 };
