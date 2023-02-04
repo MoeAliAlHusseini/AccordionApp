@@ -40,10 +40,15 @@ const Home = () => {
   const handleOnItemPress = (id: number) => {
     // this will handle which item was pressed and act accordingly
     const updatedArrayOfItems = arrayOfItems.map((item, index) => {
-      return {
-        ...item,
-        isOpen: index === id && !item.isOpen,
-      };
+      if (index === id) {
+        return {
+          ...item,
+          isOpen: !item.isOpen,
+        };
+      }
+      else {
+        return item;
+      }
     });
     setArrayOfItems(updatedArrayOfItems);
   };
