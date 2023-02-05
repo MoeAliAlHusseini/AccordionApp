@@ -23,8 +23,8 @@ const Item = (props: ItemProps) => {
             <View style={styles.container}>
                 <TouchableOpacity activeOpacity={0.6} key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
                     <View>
-                        <Text style={styles.title}>{props.title}</Text>
-                        <Text style={styles.description}>{props.description}</Text>
+                        <Text style={styles.title}>Name: {props.title}</Text>
+                        <Text style={styles.description}>Job: {props.description}</Text>
                     </View>
                     <Image source={Icons.chevronIcon} style={[styles.chevron, { transform: [{ rotate: props.isOpen ? '0deg' : '180deg' }] }]} />
                 </TouchableOpacity>

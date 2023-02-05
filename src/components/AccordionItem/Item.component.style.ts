@@ -1,12 +1,15 @@
 import {StyleSheet} from 'react-native';
 
+import Colors from '../../style/colors';
+
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'column',
     paddingHorizontal: 10,
     paddingVertical: 20,
-    borderRadius: 4,
+    borderRadius: 10,
     borderWidth: 1,
+    borderColor: Colors.GREEN,
   },
   touchableOpacityContainer: {
     flexDirection: 'row',
