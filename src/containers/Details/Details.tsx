@@ -2,12 +2,14 @@ import React from 'react';
 
 import { View, Text } from 'react-native';
 
+import styles from './Details.component.style';
+
 const Details = ({ route }) => {
     const { title, experience } = route.params;
 
     return (
-        <View>
-            <Text>Hello {title}</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>Name: {title}</Text>
             <Text>Experience: {experience}</Text>
         </View>
     );
