@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item should render 1`] = `
+<View
+  style={
+    {
+      "borderColor": "green",
+      "borderRadius": 10,
+      "borderWidth": 1,
+      "flexDirection": "column",
+      "paddingHorizontal": 10,
+      "paddingVertical": 20,
+    }
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "flexDirection": "row",
+        "opacity": 1,
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <Text
+        style={
+          {
+            "marginBottom": 20,
+          }
+        }
+      >
+        Name: 
+      </Text>
+      <Text
+        style={
+          {
+            "marginBottom": 10,
+          }
+        }
+      >
+        Job: 
+      </Text>
+    </View>
+    <Image
+      source={
+        {
+          "testUri": "../../../src/style/icons/chevron.png",
+        }
+      }
+      style={
+        [
+          {
+            "height": 12,
+            "marginLeft": "auto",
+            "width": 12,
+          },
+          {
+            "transform": [
+              {
+                "rotate": "180deg",
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
