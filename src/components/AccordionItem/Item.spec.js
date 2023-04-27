@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {render, screen} from '@testing-library/react-native';
+import '@testing-library/jest-dom';
 
 import Item from './Item';
 
@@ -26,6 +27,13 @@ describe('Item', () => {
 
   it('should check the text is rendered', () => {
     let nameText = screen.getByText('Name:');
+    let jobText = screen.getByText('Job:');
+
+    //using queryByText here since the experience props is null here since the isOpen is false by default
+    let experienceText = screen.queryByText('5 years');
+
     expect(nameText).toBeDefined();
+    expect(jobText).toBeDefined();
+    expect(experienceText).not.toBeInTheDocument();
   });
 });
