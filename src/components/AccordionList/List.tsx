@@ -14,7 +14,7 @@ interface ListProps {
 }
 
 const List = ({ items, onItemPress, onLearnMorePress }: ListProps): any => {
-    return items.map((item, index) => {
+    return items?.map((item, index) => {
         return (
             <View key={`list - item - ${item} - ${index}`} style={styles.item}>
                 <Item
