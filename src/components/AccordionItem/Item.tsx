@@ -21,7 +21,7 @@ const Item = (props: ItemProps) => {
     return (
         <>
             <View style={styles.container}>
-                <TouchableOpacity activeOpacity={0.6} key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
+                <TouchableOpacity testID="itemTouchableOpacity" activeOpacity={0.6} key={`item - ${props.id}`} style={styles.touchableOpacityContainer} onPress={() => props.onItemPress(props.id)}>
                     <View>
                         <Text style={styles.title}>Name: {props.title}</Text>
                         <Text style={styles.description}>Job: {props.description}</Text>
@@ -34,7 +34,7 @@ const Item = (props: ItemProps) => {
                     </Text>
 
                 </View>}
-                {props.isOpen && <TouchableOpacity onPress={() => props.onLearnMorePress(props.id)}><Text style={{ color: Colors.BLUE }}>Learn more</Text></TouchableOpacity>}
+                {props.isOpen && <TouchableOpacity testID="learnMoreTouchableOpacity" onPress={() => props.onLearnMorePress(props.id)}><Text style={{ color: Colors.BLUE }}>Learn more</Text></TouchableOpacity>}
             </View>
 
         </>

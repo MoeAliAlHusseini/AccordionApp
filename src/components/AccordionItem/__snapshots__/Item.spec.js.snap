@@ -48,6 +48,7 @@ exports[`Item should render 1`] = `
         "width": "100%",
       }
     }
+    testID="itemTouchableOpacity"
   >
     <View>
       <Text

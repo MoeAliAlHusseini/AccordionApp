@@ -21,8 +21,6 @@ describe('Item', () => {
 
   it('should render', () => {
     expect(screen).toMatchSnapshot();
-
-    screen.debug();
   });
 
   it('should check the text is rendered', () => {
